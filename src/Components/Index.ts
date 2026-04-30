@@ -1,0 +1,6 @@
+export { default as Navbar } from "./Navbar/Navbar"
+export { default as Home } from "./Home/Home"
+export { default as Achievements } from "./Achievements/Achievements"
+export { default as AboutMe } from "./AboutMe/AboutMe"
+export { default as skills } from "./Skills/Skills"
+export { default as Contact } from "./Contact/Contact"
