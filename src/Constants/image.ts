@@ -1,2 +1,5 @@
 export {default as Logo } from "../assets/Image/me.png"
 export {default as photo } from "../assets/Image/photo.jpg"
+export {default as ResponsiveDesign } from "..//assets/Image/responsive-design.webp"
+export {default as OnlineStore } from "..//assets/Image/onlineStore.jpg" 
+export {default as toDolist } from "..//assets/Image/toDolist.jpg" 

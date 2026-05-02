@@ -1,15 +1,26 @@
-import { AboutMe, Achievements, Contact, Home, Navbar } from "./Components/Index"
+import { Route, Routes } from "react-router";
+import { AboutMe, Achievements, Contact, Feedback, Footer, Home, Navbar, Portfolios } from "./Components/Index"
 import Skills from "./Components/Skills/Skills"
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Home />
+      <Routes>
+        <Route path="/" element={
+          <>
+          <Home />
       <Achievements />
       <AboutMe />
       <Skills />
+      <Portfolios />
+      <Feedback />
       <Contact />
+      <Footer />
+      
+          </>
+        }></Route>
+      </Routes>
     </div>
   )
 }
