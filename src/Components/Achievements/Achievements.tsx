@@ -13,8 +13,8 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 const Achievements = () => {
   return (
-    <div className="px-6 sm:px-12 lg:px-20 py-10 dark:bg-dark">
-      <h1 className="text-Primary font-semibold text-2xl hover:underline mb-6">
+    <div className="px-6 sm:px-12 lg:px-20 py-10 dark:bg-dark h-180">
+      <h1 className="text-Primary font-semibold text-2xl hover:underline mb-6 mt-30">
         Achievements:
       </h1>
 
@@ -56,13 +56,13 @@ const Achievements = () => {
 
         {/* Right column — orbit layout */}
         <div className="flex items-center justify-center">
-          <div className="relative w-80 h-80 sm:w-96 sm:h-96">
+          <div className="relative w-80 h-80 sm:w-96 sm:h-96 cursor-pointer">
 
             {/* Center large circle */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-linear-to-br from-amber-400 to-amber-500 dark:from-amber-500 dark:to-amber-600 flex items-center justify-center z-10 shadow-lg shadow-amber-300/40 dark:shadow-amber-900/40">
               <div className="flex flex-col items-center justify-center font-semibold text-amber-900 dark:text-amber-100">
                 <FaLayerGroup className="text-3xl mb-1" />
-                <p className="text-sm">Full-stack</p>
+                <p className="text-sm">Web Developer</p>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const Achievements = () => {
             <div className="absolute top-1/2 -translate-y-1/2 left-0 w-18 h-18 rounded-full bg-white dark:bg-gray-800 border-2 border-green-400 dark:border-green-500 flex items-center justify-center shadow-md hover:scale-110 transition-transform duration-200">
               <div className="flex flex-col items-center justify-center text-green-500 dark:text-green-400">
                 <FaNodeJs className="text-xl" />
-                <p className="text-xs font-semibold mt-0.5">Node.js</p>
+                <p className="text-xs font-semibold mt-0.5">Next.js</p>
               </div>
             </div>
 

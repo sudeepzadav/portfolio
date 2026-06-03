@@ -1,6 +1,6 @@
 import { OnlineStore, ResponsiveDesign, toDolist } from "./image";
 
-export const filters = ["HTML5", "CSS", "React", "Node.js", "Python", "SQL", "JavaScript"];
+export const filters = ["HTML5", "CSS", "React", "Node.js", "Python", "SQL", "JavaScript", "Next.js"];
 
 
 export const reactCards = [

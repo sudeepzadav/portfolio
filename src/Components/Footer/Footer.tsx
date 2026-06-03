@@ -60,7 +60,7 @@ const Footer = () => {
           &copy; 2026 Cybur all rights reserved
         </div>
 
-        <div className="w-40 lg:w-220 h-px bg-gray-300 dark:bg-gray-600"></div>
+        <div className="w-40 lg:w-220 h-2px bg-black dark:bg-gray-600"></div>
 
         <div>
           <ul className="flex gap-3 text-xl sm:text-2xl cursor-pointer">

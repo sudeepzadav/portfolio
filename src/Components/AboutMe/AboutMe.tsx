@@ -2,8 +2,16 @@ import { FaDownload } from "react-icons/fa6";
 import { photo } from "../../Constants/image";
 
 const AboutMe = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/cv.pdf";
+    link.download = "Sudeep_Yadav_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
   return (
-    <div className="grid grid-cols-5 dark:bg-gray-800 py-20">
+    <div className="grid grid-cols-5 dark:bg-gray-800 py-30">
       {/* Image */}
       <div className="col-span-2 px-10">
         <img src={photo} alt="Profile" className="border rounded-xl" />
@@ -11,7 +19,7 @@ const AboutMe = () => {
 
       {/* Content */}
       <div className="col-span-3 flex flex-col justify-center px-5 gap-4">
-        <h2 className="text-2xl font-bold hover:underline dark:text-gray-200 cursor-pointer">
+        <h2 className="text-2xl font-bold hover:underline dark:text-cyan-400 cursor-pointer">
           About Me
         </h2>
 
@@ -66,7 +74,9 @@ const AboutMe = () => {
               </span>
             ))}
           </div>
-          <button className="flex items-center gap-2 py-2 px-3 text-white dark:text-gray-300 text-xl font-semibold border-0 rounded-xl bg-gray-400 dark:bg-blue-400 cursor-pointer">
+          <button
+          onClick={handleDownload}
+          className="flex items-center gap-2 py-2 px-3 text-white dark:text-gray-300 text-xl font-semibold border-0 rounded-xl bg-gray-400 dark:bg-blue-400 cursor-pointer">
             Download CV <FaDownload />
           </button>
         </div>

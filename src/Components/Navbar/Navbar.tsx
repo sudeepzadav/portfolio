@@ -3,6 +3,7 @@ import { navLinks } from "../../Constants/navlink";
 import Darkmode from "./DarkMode";
 import { BiMenu, BiX } from "react-icons/bi";
 import { Logo } from "../../Constants/image";
+import { Link } from "react-router";
 
 const LogoImage = () => (
   <span className="border border-black dark:border-gray-600 rounded-full overflow-hidden flex items-center justify-center">
@@ -14,33 +15,47 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-linear-to-r from-pink-600 to-blue-500 dark:from-gray-900 dark:to-black font-semibold sticky top-0 z-50">
+    <nav className="bg-linear-to-r from-pink-600 to-blue-500 dark:from-gray-900 dark:to-black font-semibold sticky top-0 z-30">
 
       {/* Desktop */}
       <div className="hidden md:flex items-center justify-between px-10 py-4">
         <LogoImage />
-        <ul className="flex gap-10 items-center">
-          {navLinks.map((item) => (
-            <li
-              key={item.id}
-              className="
-                text-white text-xl cursor-pointer
-                px-3 py-2 rounded-xl
-                transition-colors duration-200
-                hover:bg-white/20 hover:text-white
-                dark:hover:bg-gray-700 dark:hover:text-white
-              "
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-        <Darkmode />
+
+        <div className="flex gap-10">
+          <ul className="flex gap-5">
+            {navLinks.map((item) => (
+              <li
+                key={item.id}
+                className="
+                  text-white text-xl cursor-pointer
+                  px-3 py-2 rounded-xl
+                  transition-colors duration-200
+                  hover:bg-white/20 hover:text-white
+                  dark:hover:bg-gray-700 dark:hover:text-white
+                "
+              >
+                <Link
+                  to={item.path}
+                  onClick={() => {
+                    const el = document.querySelector(item.path);
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="text-white no-underline"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+
+          <Darkmode />
+        </div>
       </div>
 
       {/* Mobile header */}
       <div className="flex md:hidden items-center justify-between px-6 py-4">
         <LogoImage />
+
         <div className="flex items-center gap-4">
           <Darkmode />
           <button
@@ -66,9 +81,18 @@ const Navbar = () => {
                 hover:bg-white/20 hover:text-white
                 dark:hover:bg-gray-700 dark:hover:text-white
               "
-              onClick={() => setMenuOpen(false)}
             >
-              {item.name}
+              <Link
+                to={item.path}
+                onClick={() => {
+                  const el = document.querySelector(item.path);
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                  setMenuOpen(false);
+                }}
+                className="text-white no-underline"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
