@@ -28,8 +28,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex items-center justify-center px-4 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-5xl bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 md:p-10">
-        {/* LEFT SIDE */}
-        <div>
+
+        {/* LEFT SIDE — form (second on mobile, first on desktop) */}
+        <div className="order-last md:order-first">
           <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white hover:underline">
             Contact Me
           </h2>
@@ -104,8 +105,8 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="flex flex-col justify-center text-center md:text-left">
+        {/* RIGHT SIDE — contact info (first on mobile, second on desktop) */}
+        <div className="order-first md:order-last flex flex-col justify-center text-center md:text-left">
           <h3 className="text-blue-500 text-2xl font-semibold dark:text-white mb-4 underline">
             Let's Connect :
           </h3>
@@ -115,18 +116,19 @@ const Contact = () => {
           </p>
 
           <div className="mt-6 text-gray-700 dark:text-gray-300 space-y-2">
-            <p className="flex items-center gap-3 cursor-pointer">
+            <p className="flex items-center justify-center md:justify-start gap-3 cursor-pointer">
               <FaLocationDot className="text-red-500 text-xl" /> Kathmandu, Nepal
             </p>
-            <p className="flex items-center gap-3 cursor-pointer">
+            <p className="flex items-center justify-center md:justify-start gap-3 cursor-pointer">
               <MdAttachEmail className="text-blue-500 text-xl" />{" "}
               yadavsudeep3676@gmail.com
             </p>
-            <p className="flex items-center gap-3 cursor-pointer">
+            <p className="flex items-center justify-center md:justify-start gap-3 cursor-pointer">
               <MdCall className="text-green-500 text-xl" /> +977-9805924999
             </p>
           </div>
         </div>
+
       </div>
     </div>
   );

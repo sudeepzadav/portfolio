@@ -97,7 +97,7 @@ const Navbar = () => {
         className={`
           md:hidden overflow-hidden
           transition-all duration-300 ease-in-out
-          ${menuOpen ? "max-h-96 pb-4" : "max-h-0"}
+          ${menuOpen ? "max-h-105 pb-4" : "max-h-0"}
         `}
       >
         <ul className="flex flex-col gap-2 px-6">
