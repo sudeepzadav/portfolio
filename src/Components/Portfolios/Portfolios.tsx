@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { filters, reactCards } from "../../Constants/Portfolios";
+import { FaGithub } from "react-icons/fa6";
 
 const Portfolios = () => {
   const [active, setActive] = useState("React");
@@ -21,7 +22,7 @@ const Portfolios = () => {
           <button
             key={label}
             onClick={() => setActive(label)}
-            className={`px-5 py-2 rounded-xl text-sm font-semibold hover:scale-105 tracking-wide transition-all duration-300
+            className={`px-5 py-2 rounded-xl text-sm font-semibold hover:scale-105 transition-all duration-300
               ${
                 active === label
                   ? "bg-linear-to-r from-cyan-500 to-purple-600 dark:from-cyan-300 dark:to-purple-400 text-white dark:text-[#1a1f2e] shadow-[0_4px_16px_rgba(110,231,247,0.35)] -translate-y-px"
@@ -52,9 +53,14 @@ const Portfolios = () => {
                 {card.title}
               </h3>
 
-              <button className="bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
-                View Demo
-              </button>
+              <div className="flex justify-between mb-2">
+                <button className="bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
+                  View Demo
+                </button>
+                <button className="flex items-center gap-2 bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
+                  <FaGithub /> Github
+                </button>
+              </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
                 {card.description}
               </p>
