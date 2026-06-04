@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router";
-import useSectionObserver from "./Hooks/useSectionObserver";
 import {
   AboutMe,
   Achievements,
@@ -14,7 +13,6 @@ import Skills from "./Components/Skills/Skills";
 import SlideToTop from "./Components/SlideToTop/SlideToTop";
 
 const App = () => {
-  useSectionObserver();
 
   return (
     <div>
@@ -25,56 +23,35 @@ const App = () => {
           path="/"
           element={
             <>
-              <section
-                id="home"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="home">
                 <Home />
               </section>
 
               <section>
-                <SlideToTop/>
+                <SlideToTop />
               </section>
 
-              <section
-                id="achievements"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="achievements">
                 <Achievements />
               </section>
 
-              <section
-                id="aboutme"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="aboutme">
                 <AboutMe />
               </section>
 
-              <section
-                id="skills"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="skills">
                 <Skills />
               </section>
 
-              <section
-                id="portfolio"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="portfolio">
                 <Portfolios />
               </section>
 
-              <section
-                id="feedback"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="feedback">
                 <Feedback />
               </section>
 
-              <section
-                id="contact"
-                className="opacity-0 translate-y-10 transition-all duration-700"
-              >
+              <section id="contact">
                 <Contact />
               </section>
             </>

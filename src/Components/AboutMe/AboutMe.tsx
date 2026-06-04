@@ -4,7 +4,7 @@ import { photo } from "../../Constants/image";
 const AboutMe = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/cv.pdf";
+    link.href = "/React-dev.cv.pdf";
     link.download = "Sudeep_Yadav_CV.pdf";
     document.body.appendChild(link);
     link.click();

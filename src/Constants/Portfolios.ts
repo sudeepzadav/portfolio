@@ -1,4 +1,4 @@
-import { OnlineStore, ResponsiveDesign, toDolist } from "./image";
+import { OnlineStore, shopZone, toDolist } from "./image";
 
 export const filters = ["HTML5", "CSS", "React", "Node.js", "Python", "SQL", "JavaScript", "Next.js"];
 
@@ -9,7 +9,7 @@ export const reactCards = [
     title: "ShopZone",
     description:
       "Build scalable and high-performance web applications using modern technologies and best practices.",
-    image: ResponsiveDesign,
+    image: shopZone,
   },
   {
     id: 2,
