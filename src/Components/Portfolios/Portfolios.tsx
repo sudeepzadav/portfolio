@@ -54,12 +54,24 @@ const Portfolios = () => {
               </h3>
 
               <div className="flex justify-between mb-2">
-                <button className="bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
-                  View Demo
-                </button>
-                <button className="flex items-center gap-2 bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
-                  <FaGithub /> Github
-                </button>
+                <a
+                  href={card.viewDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
+                    View Demo
+                  </button>
+                </a>
+                <a
+                  href={card.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="flex items-center gap-2 bg-linear-to-r from-purple-600 to-pink-500 py-1 px-3 rounded-xl cursor-pointer text-white text-sm font-medium hover:from-pink-500 hover:to-purple-600 hover:scale-105 transition-all duration-300">
+                    <FaGithub /> Github
+                  </button>
+                </a>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-300">
                 {card.description}
